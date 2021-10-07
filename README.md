@@ -37,10 +37,8 @@ I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, deskto
 
 ### Links
 
-I'll update these links once I've submitted my solution. 
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mobilefirst-solution-using-bem-flexbox-and-vanilla-js-cd_wUsWbj)
+- [Live Site URL](https://victor-nyagudi.github.io/faq-accordion-card/)
 
 ## My process
 
