@@ -99,16 +99,9 @@ Still, timing is something I'll keep working on. Hoping to get these "simpler" c
 
 I'm also hoping to do more accordions in future with more animations e.g. the arrow rotating up, and the 
 information box sliding down. I'd spent too much time on this challenge already by the time I opted to
-submit it I felt adding more complexity was not the best move.
+submit it, I felt adding more complexity was not the best move.
 
 Speaking of which, animation in general is something I'd like to work on in future, God-willing. 
-
-I'm aware of the performance hit that comes with attaching many event listeners in `main.js`, but for this
-scenario, I didn't worry too much about it. The FAQs aren't that many, so it's not a major concern.
-
-However, I know that the better approach would be to attach one event listener to the container housing
-the FAQs then query the DOM for the one that's clicked. I just went with my initial approach for the sake
-of time and simplicity. 
 
 ### Useful resources
 
@@ -116,9 +109,3 @@ of time and simplicity.
 - [background-clip property](https://www.w3schools.com/cssref/css3_pr_background-clip.asp) - `background-clip` property article.
 - [Centrally positioning an absolutely positioned element](https://stackoverflow.com/questions/7720730/how-to-align-absolutely-positioned-element-to-center) - A good answer I found on StackOverflow on how to centrally align absolutely positioned elements. I initially was going to use this but decided to go with
 a different approach. Still, it gave me some valuable information on how to go about things. 
-
-
-#### Note
-
-I'm aware that using a `<div>` for the FAQs probably isn't the best approach - a `<button>` would be the better
-option - so whenever I find some time, I'll implement that instead.
