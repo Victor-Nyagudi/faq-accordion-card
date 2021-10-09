@@ -116,3 +116,9 @@ of time and simplicity.
 - [background-clip property](https://www.w3schools.com/cssref/css3_pr_background-clip.asp) - `background-clip` property article.
 - [Centrally positioning an absolutely positioned element](https://stackoverflow.com/questions/7720730/how-to-align-absolutely-positioned-element-to-center) - A good answer I found on StackOverflow on how to centrally align absolutely positioned elements. I initially was going to use this but decided to go with
 a different approach. Still, it gave me some valuable information on how to go about things. 
+
+
+#### Note
+
+I'm aware that using a `<div>` for the FAQs probably isn't the best approach - a `<button>` would be the better
+option - so whenever I find some time, I'll implement that instead.
