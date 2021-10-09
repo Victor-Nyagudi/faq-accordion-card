@@ -88,6 +88,23 @@ Finally, I learned that you can style multiple background images using comma sep
 about having multiple images, but now that I know you can also style them separately, I'm a little more
 confident about using background images. 
 
+After submitting my solution and getting some feedback, I learned some more about accessibility in terms of
+properties such as `aria-expanded`, `aria-hidden`, and setting the `alt` attribute to an empty value for 
+decorative images.
+
+Alternatively, to avoid having to manipulate the `aria-expanded` value via JavaScript in accordions when the
+button is clicked, you can use the `<details>` element that comes with this type of functionality and is kind
+of better suited for accordions.  
+
+I opted to stick to using a button because the amount of styling required was less. 
+
+Also, using `height: 100vh` is not the best for the `<body>` tag since this doesn't allow the content room to 
+expand if it needs to. This can be seen when you view the page on different screen sizez, particularly phones
+or tablets in landscape mode. 
+
+A better way is to use `min-height: 100vh` that allows for expansion.
+
+
 ### Continued development
 
 I gave myself a window for when this challenge should've been completed I overshot a little bit. Most of it is due to the fact that this is the first accordion I've made, so some reading was necessary.
