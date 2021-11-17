@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+    Mobile svg image not perfectly centered to begin with, 
+    so I had to work some magic to make it look the 
+    way the design intended.
+
+    Desktop background image not aligned properly either 
+    which forced me to use some means I wish I could avoid.
+    I don't have the figma files (I'm on free version), so 
+    these are some sacrifices I have to make. 
+*/
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-size: .875rem;
+  color: #1d1e35;
+  padding: 11em 0;
+  margin: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background-image: linear-gradient(to top, #6565e7, #af67e9);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+h1, p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.accordion {
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 50px #422f6a;
+          box-shadow: 0 10px 50px #422f6a;
+  border-radius: 19px;
+  padding: 3.6em 0;
+}
+
+.accordion__image {
+  position: absolute;
+  top: -19%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.accordion__image-shadow {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.accordion__title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+  margin: 2.5em 0 .5em 0;
+}
+
+.accordion__option {
+  font-family: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .6em 1.7em;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e7e7e9;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 1.1em 0;
+}
+
+.accordion__option:hover {
+  color: #f47c57;
+}
+
+.accordion__option img {
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+
+.accordion__option.open {
+  font-weight: 700;
+}
+
+.accordion__option.open img {
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion__option.open .accordion__answer {
+  display: block;
+  font-weight: initial;
+}
+
+.accordion__answer {
+  font-size: .8rem;
+  color: #787887;
+  text-align: left;
+  line-height: 1.5;
+  display: none;
+}
+
+.accordion .illustration-box {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 900px) {
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container {
+    max-width: 950px;
+  }
+  .accordion {
+    position: relative;
+    background-image: url("../images/bg-pattern-desktop.svg"), url("../images/illustration-woman-online-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 330% 60%,-30% 50%;
+    padding: 6em 0;
+  }
+  .accordion__image-container {
+    width: 50%;
+  }
+  .accordion__title {
+    text-align: left;
+    margin: 0 0 .5em 0;
+  }
+  .accordion__options {
+    width: 50%;
+  }
+  .accordion__image {
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: -10%;
+    -webkit-clip-path: inset(0 0 0 15%);
+            clip-path: inset(0 0 0 15%);
+    margin: 0;
+  }
+  .accordion__image-shadow {
+    display: none;
+    position: absolute;
+    top: -60%;
+    right: 0%;
+    left: 0;
+  }
+  .accordion .illustration-box {
+    display: block;
+    position: absolute;
+    left: -12%;
+    top: 46%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .accordion {
+    background-position: 3700% 70%, -20% 50%;
+  }
+  .illustration-box {
+    left: -10.5%;
+    top: 42%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

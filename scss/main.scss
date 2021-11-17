@@ -1,0 +1,124 @@
+@import './config';
+
+/*
+    Mobile svg image not perfectly centered to begin with, 
+    so I had to work some magic to make it look the 
+    way the design intended.
+
+    Desktop background image not aligned properly either 
+    which forced me to use some means I wish I could avoid.
+    I don't have the figma files (I'm on free version), so 
+    these are some sacrifices I have to make. 
+*/
+
+body {
+    font-family: $primary-font;
+    font-weight: getFontWeight('regular');
+    font-size: .875rem;
+    color: getColor('very-dark-saturated-blue');
+    
+    padding: 11em 0;
+    margin: 0;
+
+    background-image: linear-gradient(to top, getColor('soft-blue'), getColor('soft-violet'));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1, p { margin: 0; }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 87%;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.accordion {
+    position: relative;
+    background-color: white;
+    box-shadow: 0 10px 50px hsl(259, 39%, 30%);
+    
+    border-radius: 19px;
+    padding: 3.6em 0;
+
+    &__image {
+        position: absolute;
+        top: -19%;
+        right: 0;
+        left: 0;
+    
+        margin: 0 auto;
+
+        &-shadow {
+            position: absolute;
+            top: 0%;
+            right: 0;
+            left: 0;
+
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        font-size: 2.1rem;
+        font-weight: getFontWeight('bold');
+        letter-spacing: -1px;
+        
+        text-align: center;
+        margin: 2.5em 0 .5em 0;
+    }
+
+    &__option {
+        font-family: inherit;
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: .6em 1.7em;
+        
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid getColor('light-grayish-blue');
+        background-color: inherit;
+    
+        cursor: pointer;
+        padding: 1.1em 0;
+
+        &:hover { color: getColor('soft-red'); }
+
+        img { transition: transform .4s ease-in-out; }
+    }
+
+    &__option.open {
+        font-weight: getFontWeight('bold');
+
+        img { 
+            transition: transform .4s ease-in-out;
+            transform: rotate(180deg); 
+        }
+
+        .accordion__answer {
+            display: block;
+            font-weight: initial;
+        }
+    }
+
+    &__answer {
+        font-size: .8rem;
+        color: getColor('dark-grayish-blue');
+        text-align: left;
+        line-height: 1.5;
+        
+        display: none;
+    }
+
+    .illustration-box { display: none; }
+}
+
+@import './responsive';
