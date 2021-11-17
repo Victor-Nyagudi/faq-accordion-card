@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/faq-accordion-card-fullscreen.png)
+![](./dist/screenshots/faq-accordion-card-fullscreen.png)
 
 I've included 4 screenshots in the `/screenshots` folder: mobile, tablet, desktop, and fullscreen.
 
@@ -61,7 +61,7 @@ section below.
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - Mobile-first workflow
 
@@ -103,7 +103,6 @@ expand if it needs to. This can be seen when you view the page on different scre
 or tablets in landscape mode. 
 
 A better way is to use `min-height: 100vh` that allows for expansion.
-
 
 ### Continued development
 
